@@ -1,0 +1,19 @@
+name: objectdb_flutter
+description: A new Flutter project.
+version: 0.0.1
+author:
+homepage:
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  objectdb:
+    path: ../objectdb
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+
+flutter:
