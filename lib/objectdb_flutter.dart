@@ -4,6 +4,7 @@ import 'dart:async';
 import 'dart:collection';
 import 'package:flutter/material.dart';
 import 'package:objectdb/objectdb.dart' as base;
+export 'package:objectdb/objectdb.dart';
 
 class ObjectDB extends base.ObjectDB {
   ObjectDB(path) : super(path);
@@ -64,30 +65,6 @@ abstract class StoreWatcherMixin<T extends StatefulWidget> extends State<T> {
       setState(() {});
     });
     await store.init();
-    int i = 0;
-    new Timer.periodic(Duration(seconds: 2), (Timer t) {
-      db.insert({
-        'name': {'first': 'Malinda', 'last': 'Reynolds'},
-        'message': 'hoho',
-        'active': false,
-        'count': i++
-      });
-
-      if (i > 10) i = 0;
-    });
-
-    new Timer.periodic(Duration(seconds: 10), (Timer t) {
-      db.update({
-        base.Op.gte: {'count': 5}
-      }, {
-        base.Op.set: {'message': 'updated'}
-      });
-    });
-
-    new Timer.periodic(Duration(seconds: 15), (Timer t) {
-      db.remove({'message': 'updated'});
-    });
-
     return store;
   }
 }

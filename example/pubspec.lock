@@ -203,10 +203,10 @@ packages:
   objectdb:
     dependency: transitive
     description:
-      path: "../../objectdb"
-      relative: true
-    source: path
-    version: "1.0.2"
+      name: objectdb
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.3"
   objectdb_flutter:
     dependency: "direct main"
     description:

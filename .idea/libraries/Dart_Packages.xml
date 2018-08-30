@@ -208,7 +208,7 @@
         <entry key="objectdb">
           <value>
             <list>
-              <option value="$PROJECT_DIR$/../objectdb/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/objectdb-1.0.3/lib" />
             </list>
           </value>
         </entry>
@@ -431,6 +431,7 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/mime-0.9.6/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/multi_server_socket-1.0.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/node_preamble-1.4.1/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/objectdb-1.0.3/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/package_config-1.0.3/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/package_resolver-1.0.2/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/path-1.5.1/lib" />
@@ -460,7 +461,6 @@
       <root url="file://$USER_HOME$/flutter-dev/flutter/bin/cache/pkg/sky_engine/lib" />
       <root url="file://$USER_HOME$/flutter-dev/flutter/packages/flutter/lib" />
       <root url="file://$USER_HOME$/flutter-dev/flutter/packages/flutter_test/lib" />
-      <root url="file://$PROJECT_DIR$/../objectdb/lib" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

@@ -1,5 +1,5 @@
 name: objectdb_flutter
-description: A new Flutter project.
+description: Flutter ObjectDB listener with reactive store
 version: 0.0.1
 author:
 homepage:
@@ -8,8 +8,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  objectdb:
-    path: ../objectdb
+  objectdb: ^1.0.3
 
 dev_dependencies:
   flutter_test:
