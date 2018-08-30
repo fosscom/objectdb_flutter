@@ -68,6 +68,31 @@ void main() async {
     },
   ]);
 
+  // simulate insert/update/delete
+  int i = 0;
+  new Timer.periodic(Duration(seconds: 2), (Timer t) {
+    db.insert({
+      'name': {'first': 'Malinda', 'last': 'Reynolds'},
+      'message': 'hoho ' + i.toString(),
+      'active': i % 2 == 0,
+      'count': i++
+    });
+
+    if (i > 10) i = 0;
+  });
+
+  new Timer.periodic(Duration(seconds: 10), (Timer t) {
+    db.update({
+      Op.gte: {'count': 5}
+    }, {
+      Op.set: {'message': 'updated'}
+    });
+  });
+
+  new Timer.periodic(Duration(seconds: 15), (Timer t) {
+    db.remove({'message': 'updated'});
+  });
+
   runApp(MyApp());
 }
 
@@ -105,30 +130,6 @@ class _MyHomePageState extends State<MyHomePage>
 
   void init() async {
     contacts = await listenToStore(db, {'active': true});
-
-    int i = 0;
-    new Timer.periodic(Duration(seconds: 2), (Timer t) {
-      db.insert({
-        'name': {'first': 'Malinda', 'last': 'Reynolds'},
-        'message': 'hoho',
-        'active': false,
-        'count': i++
-      });
-
-      if (i > 10) i = 0;
-    });
-
-    new Timer.periodic(Duration(seconds: 10), (Timer t) {
-      db.update({
-        Op.gte: {'count': 5}
-      }, {
-        Op.set: {'message': 'updated'}
-      });
-    });
-
-    new Timer.periodic(Duration(seconds: 15), (Timer t) {
-      db.remove({'message': 'updated'});
-    });
   }
 
   @override
