@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:objectdb_flutter/objectdb_flutter.dart';
@@ -104,6 +105,30 @@ class _MyHomePageState extends State<MyHomePage>
 
   void init() async {
     contacts = await listenToStore(db, {'active': true});
+
+    int i = 0;
+    new Timer.periodic(Duration(seconds: 2), (Timer t) {
+      db.insert({
+        'name': {'first': 'Malinda', 'last': 'Reynolds'},
+        'message': 'hoho',
+        'active': false,
+        'count': i++
+      });
+
+      if (i > 10) i = 0;
+    });
+
+    new Timer.periodic(Duration(seconds: 10), (Timer t) {
+      db.update({
+        Op.gte: {'count': 5}
+      }, {
+        Op.set: {'message': 'updated'}
+      });
+    });
+
+    new Timer.periodic(Duration(seconds: 15), (Timer t) {
+      db.remove({'message': 'updated'});
+    });
   }
 
   @override
