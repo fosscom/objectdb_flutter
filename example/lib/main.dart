@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:path_provider/path_provider.dart';
+import 'package:path_provider/path_provider.dart' as path;
 import 'package:objectdb_flutter/objectdb_flutter.dart';
 
 // declare db object
@@ -9,7 +9,7 @@ ObjectDB db;
 
 void main() async {
   // get document directory using path_provider plugin
-  Directory appDocDir = await getApplicationDocumentsDirectory();
+  Directory appDocDir = await path.getApplicationDocumentsDirectory();
 
   String dbFilePath = [appDocDir.path, 'user.db'].join('/');
 
