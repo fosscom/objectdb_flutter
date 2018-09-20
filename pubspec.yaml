@@ -1,14 +1,17 @@
 name: objectdb_flutter
 description: Flutter ObjectDB listener with reactive store
-version: 0.0.1
+version: 0.0.2
 author: Team netz.chat <dev@netzchat.com>
 homepage: https://github.com/netz-chat/objectdb_flutter
+
+environment:
+    sdk: '>=2.0.0-dev.0.0 <3.0.0'
 
 dependencies:
   flutter:
     sdk: flutter
 
-  objectdb: ^1.0.4
+  objectdb: ^1.0.5
 
 dev_dependencies:
   flutter_test:

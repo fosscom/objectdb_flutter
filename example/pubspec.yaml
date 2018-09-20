@@ -1,5 +1,11 @@
 name: example
 description: A new Flutter project.
+version: 0.0.1
+author: Team netz.chat <dev@netzchat.com>
+homepage: https://github.com/netz-chat/objectdb_flutter
+
+environment:
+    sdk: '>=2.0.0-dev.0.0 <3.0.0'
 
 dependencies:
   flutter:
