@@ -1,6 +1,6 @@
 name: objectdb_flutter
-description: Flutter ObjectDB listener with reactive store
-version: 0.0.3
+description: Flutter ObjectDB (embedded document-oriented NoSQL database) -listener with reactive store
+version: 0.0.4
 author: Team netz.chat <dev@netzchat.com>
 homepage: https://github.com/netz-chat/objectdb_flutter
 
